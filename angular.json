@@ -3,5 +3,121 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "vsync-pipe": {
+      "projectType": "library",
+      "root": "projects/vsync-pipe",
+      "sourceRoot": "projects/vsync-pipe/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/vsync-pipe/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/vsync-pipe/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/vsync-pipe/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/vsync-pipe/src/test.ts",
+            "tsConfig": "projects/vsync-pipe/tsconfig.spec.json",
+            "karmaConfig": "projects/vsync-pipe/karma.conf.js"
+          }
+        }
+      }
+    },
+    "counter-example-angular-14": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/counter-example-angular-14",
+      "sourceRoot": "projects/counter-example-angular-14/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/counter-example-angular-14",
+            "index": "projects/counter-example-angular-14/src/index.html",
+            "main": "projects/counter-example-angular-14/src/main.ts",
+            "polyfills": "projects/counter-example-angular-14/src/polyfills.ts",
+            "tsConfig": "projects/counter-example-angular-14/tsconfig.app.json",
+            "assets": [
+              "projects/counter-example-angular-14/src/favicon.ico",
+              "projects/counter-example-angular-14/src/assets"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "counter-example-angular-14:build:production"
+            },
+            "development": {
+              "browserTarget": "counter-example-angular-14:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "counter-example-angular-14:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/counter-example-angular-14/src/test.ts",
+            "polyfills": "projects/counter-example-angular-14/src/polyfills.ts",
+            "tsConfig": "projects/counter-example-angular-14/tsconfig.spec.json",
+            "karmaConfig": "projects/counter-example-angular-14/karma.conf.js",
+            "assets": [
+              "projects/counter-example-angular-14/src/favicon.ico",
+              "projects/counter-example-angular-14/src/assets"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
   }
 }

@@ -1,12 +1,13 @@
 {
   "name": "vsync-pipe",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Efficient reactivity in Angular without Observables. Combines Vue's reactivity API with the async pipe.",
+  "author": "Joshua Hull",
+  "license": "MIT",
   "scripts": {
-    "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "build:vsync-pipe": "ng build vsync-pipe",
+    "pack:vsync-pipe": "cd dist/vsync-pipe && npm pack"
   },
   "private": true,
   "dependencies": {
@@ -20,18 +21,16 @@
     "@angular/router": "^14.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "vsync-pipe": "file:dist/vsync-pipe/vsync-pipe-14.1.0.tgz",
+    "@vue/reactivity": "^3.2.33",
+    "@vue/runtime-core": "^3.2.33",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^14.1.3",
     "@angular/cli": "~14.1.3",
     "@angular/compiler-cli": "^14.1.0",
-    "@types/jasmine": "~4.0.0",
-    "jasmine-core": "~4.2.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.0.0",
+    "ng-packagr": "^14.1.0",
     "typescript": "~4.7.2"
   }
 }
