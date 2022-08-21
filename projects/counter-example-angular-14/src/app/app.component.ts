@@ -24,12 +24,28 @@ h1, p {
 <div class="app">
   <h1>Vsync Counter App</h1>
   <p>
-    Current value: {{ currentValue | vsync }}<br /><br />
-    2x multiplier: {{ multiplier | vsync }}<br /><br />
+    <span data-test-id="current-value">
+      Current value: {{ currentValue | vsync }}
+    </span>
+    <br />
+    <br />
+    <span data-test-id="multiplied-value">
+      2x multiplier: {{ multiplier | vsync }}
+    </span>
   </p>
   <div class="buttons-container">
-    <button (click)="handleClickIncrease()">+</button>
-    <button (click)="handleClickDecrease()">-</button>
+    <button
+      (click)="handleClickIncrease()"
+      data-test-id="plus-button"
+    >
+      +
+    </button>
+    <button
+      (click)="handleClickDecrease()"
+      data-test-id="minus-button"
+    >
+      -
+    </button>
   </div>
 </div>
 `,
@@ -52,6 +68,6 @@ export class AppComponent implements DoCheck {
   }
 
   ngDoCheck() {
-    console.log("running change detection...");
+    console.debug("running change detection...");
   }
 }
