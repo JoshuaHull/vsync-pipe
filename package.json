@@ -25,7 +25,7 @@
     "@vue/runtime-core": "^3.2.33",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "vsync-pipe": "file:dist/vsync-pipe/vsync-pipe-1.0.0.tgz",
+    "vsync-pipe": "file:dist/vsync-pipe/vsync-pipe-1.0.1.tgz",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
