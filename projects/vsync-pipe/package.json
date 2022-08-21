@@ -1,16 +1,13 @@
 {
   "name": "vsync-pipe",
-  "version": "14.1.0",
+  "version": "1.0.0",
   "description": "Efficient reactivity in Angular without Observables. Combines Vue's reactivity API with the async pipe.",
   "author": "Joshua Hull",
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^14.1.0",
-    "@vue/reactivity": "^3.2.33",
-    "@vue/runtime-core": "^3.2.33",
-    "rxjs": "^6.5.3 || ^7.4.0"
-  },
-  "dependencies": {
-    "tslib": "^2.3.0"
+    "@angular/common": ">=11",
+    "@vue/reactivity": ">=3",
+    "@vue/runtime-core": ">=3",
+    "rxjs": ">=6"
   }
 }

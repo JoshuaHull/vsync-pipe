@@ -21,7 +21,7 @@
     "@angular/router": "^14.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "vsync-pipe": "file:dist/vsync-pipe/vsync-pipe-14.1.0.tgz",
+    "vsync-pipe": "file:dist/vsync-pipe/vsync-pipe-1.0.0.tgz",
     "@vue/reactivity": "^3.2.33",
     "@vue/runtime-core": "^3.2.33",
     "zone.js": "~0.11.4"

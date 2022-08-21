@@ -47,6 +47,18 @@ imports: [
 ],
 ```
 
+## Why?
+
+It's no secret that RXJS has a steep learning curve. In my opinion, depending on RXJS
+makes it a chore to develop high performance Angular apps. Don't get me wrong, I like
+RXJS, but the developer experience with Vue and its reactivity API far outweighs that
+of Angular + RXJS.
+
+The vsync pipe allows you to use Vue's ref objects in place of behaviour subjects,
+and computed functions in favour of map, tap, slap.
+
+Its code is short and sweet, and your code will be too :)
+
 ## License
 
 MIT
